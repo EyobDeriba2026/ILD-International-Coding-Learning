@@ -2,135 +2,235 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ILD - International Coding Learning</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Learn HTML, CSS and JavaScript step by step with ILD International Coding Learning.">
+  <title>ILD - International Coding Learning</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<header class="header">
+  <header class="header">
     <div class="logo">
-        <div class="logo-icon">🌍</div>
-        <div>
-            <h1>ILD</h1>
-            <p>INTERNATIONAL<br>CODING LEARNING</p>
-        </div>
+      <span class="logo-icon">🌐</span>
+      <div>
+        <h2>ILD</h2>
+        <small>INTERNATIONAL CODING LEARNING</small>
+      </div>
     </div>
 
-    <nav>
-        <a href="#home">Home</a>
-        <a href="#courses">Courses</a>
-        <a href="#about">About</a>
-        <a href="#quiz">Quiz</a>
-        <a href="#certificate">Certificate</a>
-        <a href="#contact">Contact</a>
+    <nav class="navbar">
+      <a href="#home">Home</a>
+      <a href="#courses">Courses</a>
+      <a href="#about">About</a>
+      <a href="#certificate">Certificate</a>
     </nav>
-</header>
+  </header>
 
-<section class="hero" id="home">
-    <div class="hero-content">
-        <h2><span>ILD</span> - International<br>Coding Learning</h2>
-        <h3>Learn Coding • Build Skills • Get Certified</h3>
+  <main>
+    <!-- HOME SECTION -->
+    <section id="home" class="hero">
+      <div class="hero-content">
+        <p class="welcome">WELCOME TO ILD</p>
+        <h1>Learn Coding.<br><span>Build Your Future.</span></h1>
         <p>
-            A free online platform to learn programming
-            and digital skills from anywhere in the world.
+          Start learning web development from the beginning.
+          Learn HTML, CSS and JavaScript with lessons, examples,
+          exercises and quizzes.
         </p>
-        <a href="#courses" class="main-btn">🎓 Start Learning Now →</a>
-    </div>
+        <a href="#courses" class="primary-btn">Explore Courses</a>
+      </div>
+      <div class="hero-image">
+        <div class="code-symbol">&lt;/&gt;</div>
+        <h2>Think. Code. Create.</h2>
+        <p>Your journey into programming starts here.</p>
+      </div>
+    </section>
 
-    <div class="hero-image">
-        <div class="computer">💻</div>
-        <h2>Code Your Future!</h2>
-        <p>HTML • CSS • JavaScript</p>
-    </div>
-</section>
+    <!-- FEATURES -->
+    <section class="features">
+      <div class="feature-card">
+        <h3>📚 Written Lessons</h3>
+        <p>Learn programming step by step.</p>
+      </div>
+      <div class="feature-card">
+        <h3>💻 Practical Examples</h3>
+        <p>Understand coding through examples.</p>
+      </div>
+      <div class="feature-card">
+        <h3>📝 Quizzes</h3>
+        <p>Test what you have learned.</p>
+      </div>
+      <div class="feature-card">
+        <h3>🏆 Certificate</h3>
+        <p>Earn a certificate after passing the final exam.</p>
+      </div>
+    </section>
 
-<section class="features">
-    <div>▶️ <h3>Video Lessons</h3><p>Learn step by step</p></div>
-    <div>💻 <h3>Practice Exercises</h3><p>Apply what you learn</p></div>
-    <div>🏆 <h3>Final Quiz</h3><p>Test your knowledge</p></div>
-    <div>📜 <h3>Get Certificate</h3><p>Show your skills</p></div>
-</section>
+    <!-- COURSES SECTION -->
+    <section id="courses" class="section">
+      <div class="section-heading">
+        <p class="welcome">START LEARNING</p>
+        <h2>Our Coding Courses</h2>
+        <p>Choose a course and begin your coding journey.</p>
+      </div>
 
-<section class="courses" id="courses">
-    <h2>Our Courses</h2>
+      <div class="course-grid">
+        <article class="course-card">
+          <div class="course-icon">🌐</div>
+          <h3>HTML for Beginners</h3>
+          <p>Learn how to create the structure of websites.</p>
+          <p class="course-duration">Weeks 1–2</p>
+          <button class="primary-btn start-course" data-course="html">
+            Start Course
+          </button>
+        </article>
 
-    <div class="course-container">
-        <div class="course-card">
-            <h3>HTML</h3>
-            <p>Learn how to build web pages using HTML.</p>
-            <a href="#lessons">Start Course →</a>
+        <article class="course-card">
+          <div class="course-icon">🎨</div>
+          <h3>CSS for Beginners</h3>
+          <p>Learn how to design and style web pages.</p>
+          <p class="course-duration">Weeks 3–4</p>
+          <button class="primary-btn start-course" data-course="css">
+            Start Course
+          </button>
+        </article>
+
+        <article class="course-card">
+          <div class="course-icon">⚡</div>
+          <h3>JavaScript for Beginners</h3>
+          <p>Learn how to make websites interactive.</p>
+          <p class="course-duration">Weeks 5–6</p>
+          <button class="primary-btn start-course" data-course="javascript">
+            Start Course
+          </button>
+        </article>
+      </div>
+    </section>
+
+    <!-- COURSE LEARNING AREA -->
+    <section id="learning" class="section learning-section" hidden>
+      <div class="section-heading">
+        <p class="welcome">YOUR CLASSROOM</p>
+        <h2 id="course-title">Course Lessons</h2>
+        <p>Read each lesson, study the examples and complete the exercises.</p>
+      </div>
+
+      <div class="learning-layout">
+        <aside class="lesson-sidebar">
+          <h3>Course Lessons</h3>
+          <div id="lesson-list"></div>
+          <button id="course-quiz-button" class="secondary-btn">
+            Take Course Quiz
+          </button>
+        </aside>
+
+        <div class="lesson-content">
+          <p id="lesson-number" class="welcome">LESSON 1</p>
+          <h2 id="lesson-title">Welcome to the Course</h2>
+          <div id="lesson-body">
+            Select a lesson to begin learning.
+          </div>
+
+          <div class="lesson-navigation">
+            <button id="previous-lesson" class="secondary-btn">
+              Previous
+            </button>
+            <button id="next-lesson" class="primary-btn">
+              Next Lesson
+            </button>
+          </div>
         </div>
+      </div>
+    </section>
 
-        <div class="course-card">
-            <h3>CSS</h3>
-            <p>Learn how to design beautiful websites.</p>
-            <a href="#lessons">Start Course →</a>
-        </div>
+    <!-- QUIZ AREA -->
+    <section id="quiz" class="section quiz-section" hidden>
+      <div class="section-heading">
+        <p class="welcome">TEST YOUR KNOWLEDGE</p>
+        <h2 id="quiz-title">Course Quiz</h2>
+      </div>
 
-        <div class="course-card">
-            <h3>JavaScript</h3>
-            <p>Make your websites interactive.</p>
-            <a href="#lessons">Start Course →</a>
-        </div>
+      <div class="quiz-box">
+        <p id="quiz-progress">Question 1</p>
+        <h3 id="quiz-question">Question will appear here.</h3>
+        <div id="quiz-options"></div>
+        <button id="submit-answer" class="primary-btn">
+          Submit Answer
+        </button>
+        <p id="quiz-feedback" aria-live="polite"></p>
+        <button id="next-question" class="secondary-btn" hidden>
+          Next Question
+        </button>
+        <div id="quiz-result"></div>
+      </div>
+    </section>
 
-        <div class="course-card">
-            <h3>More Courses</h3>
-            <p>Explore more programming courses.</p>
-            <a href="#lessons">View All →</a>
-        </div>
-    </div>
-</section>
+    <!-- FINAL EXAM -->
+    <section id="final-exam" class="section" hidden>
+      <div class="section-heading">
+        <p class="welcome">FINAL ASSESSMENT</p>
+        <h2>ILD Final Examination</h2>
+        <p>Complete the final examination to qualify for your certificate.</p>
+      </div>
 
-<section class="about" id="about">
-    <div class="about-logo">
-        🌍
-        <h1>ILD</h1>
-        <p>INTERNATIONAL<br>CODING LEARNING</p>
-    </div>
+      <div class="quiz-box">
+        <p id="exam-progress">Question 1 of 20</p>
+        <h3 id="exam-question">Your question will appear here.</h3>
+        <div id="exam-options"></div>
+        <button id="exam-next" class="primary-btn">Next Question</button>
+        <div id="exam-result"></div>
+      </div>
+    </section>
 
-    <div class="about-content">
-        <h2>About ILD</h2>
+    <!-- CERTIFICATE -->
+    <section id="certificate" class="section">
+      <div class="section-heading">
+        <p class="welcome">YOUR ACHIEVEMENT</p>
+        <h2>Certificate of Completion</h2>
         <p>
-            ILD (International Coding Learning) is a global
-            online learning platform dedicated to teaching
-            programming and digital skills.
+          Complete the courses and pass the final examination
+          with a score of 95% or higher.
         </p>
-        <p>
-            Our mission is to make quality coding education
-            accessible to everyone, everywhere.
-        </p>
-        <h3>Learn Today, Lead Tomorrow!</h3>
-    </div>
-</section>
+      </div>
 
-<section id="lessons" class="extra-section">
-    <h2>Learn and Practice</h2>
-    <p>Start your coding journey with ILD.</p>
-</section>
+      <div id="certificate-area" class="certificate-box">
+        <h2>🏆 ILD</h2>
+        <h3>Certificate of Completion</h3>
+        <p>Complete the final exam to unlock your certificate.</p>
+        <p id="certificate-status">Certificate not yet available.</p>
+        <div id="certificate-details"></div>
+        <button id="print-certificate" class="primary-btn" hidden>
+          Print Certificate
+        </button>
+      </div>
+    </section>
 
-<section id="quiz" class="extra-section">
-    <h2>Final Quiz</h2>
-    <p>Test your coding knowledge after completing your lessons.</p>
-</section>
+    <!-- ABOUT -->
+    <section id="about" class="section about-section">
+      <div class="section-heading">
+        <p class="welcome">ABOUT US</p>
+        <h2>About ILD International Coding Learning</h2>
+      </div>
+      <p>
+        ILD International Coding Learning is an online learning project
+        created to help beginners understand web development.
+        Our learning materials introduce HTML, CSS and JavaScript
+        through written lessons, practical examples and assessments.
+      </p>
+      <p>
+        Learners can study at their own pace and practise their
+        programming skills using a web browser.
+      </p>
+    </section>
+  </main>
 
-<section id="certificate" class="extra-section">
-    <h2>ILD Certificate</h2>
-    <p>Complete your course and score above 95/100 to qualify for your certificate.</p>
-</section>
+  <footer class="footer">
+    <h3>ILD International Coding Learning</h3>
+    <p>Learn Today. Build Tomorrow.</p>
+    <p>© 2026 ILD International Coding Learning. All rights reserved.</p>
+  </footer>
 
-<section id="contact" class="extra-section">
-    <h2>Contact ILD</h2>
-    <p>Learn, practice and grow with our international learning community.</p>
-</section>
-
-<footer>
-    <h2>ILD - International Coding Learning</h2>
-    <p>Learn Today, Lead Tomorrow!</p>
-    <p>© 2026 ILD. All Rights Reserved.</p>
-</footer>
-
-<script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
